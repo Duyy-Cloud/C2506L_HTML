@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flexbox Practice</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo">
+    <div class="wrap header-inner">
+      <a class="logo" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo" />
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn" href="#">Login</a>
     </div>
-    <nav>
-      <ul>
+  </header>
+
+  <main class="wrap layout">
+    <aside>
+      <h3>Sidebar</h3>
+      <ul class="links">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-    </nav>
-    <a href="#" class="login-btn">Login</a>
-  </header>
-
-  <div class="layout">
-    <aside>
-      <h3>Sidebar</h3>
-      <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
     </aside>
-    <main>
+
+    <section class="content">
       <h2>Main Content</h2>
       <p>This is the main content area.</p>
+
       <div class="gallery">
-        <img src="https://picsum.photos/300?1" alt="Gallery 1">
-        <img src="https://picsum.photos/300?2" alt="Gallery 2">
-        <img src="https://picsum.photos/300?3" alt="Gallery 3">
+        <img src="https://picsum.photos/id/1011/800/600" alt="Gallery 1" />
+        <img src="https://picsum.photos/id/1018/800/600" alt="Gallery 2" />
+        <img src="https://picsum.photos/id/1024/800/600" alt="Gallery 3" />
       </div>
-    </main>
-  </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Flexbox Practice. All rights reserved.
+    <div class="wrap footer-inner">
+      <small>© 2025 Flexbox Practice</small>
+      <small>Built with HTML & CSS</small>
+    </div>
   </footer>
 
 </body>

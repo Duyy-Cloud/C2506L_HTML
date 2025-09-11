@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="baitap3.css">
+</head>
+
+<body>
+    <form class="event-registration" method="post">
+        <h1>Event Registration</h1>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="gender">Gender</label>
+        <div class="inline-options">
+        <input type="radio" id="male" name="gender" value="male"> <label for="male">male</label>
+        <input type="radio" id="female" name="gender" value="female"> <label for="female">female</label>
+        <input type="radio" id="other" name="gender" value="other"> <label for="other">other</label>
+        <br></div>
+        <label for="Hobbies">Hobbies</label>
+        <div class="inline-options">
+        <input type="checkbox" id="reading" name="hobbies" value="reading"> <label for="reading">Reading</label>
+        <input type="checkbox" id="traveling" name="hobbies" value="traveling"> <label for="traveling">Traveling</label>
+        <input type="checkbox" id="gaming" name="hobbies" value="gaming"> <label for="gaming">Gaming</label>
+        <input type="checkbox" id="cooking" name="hobbies" value="cooking"> <label for="cooking">Cooking</label>
+        <input type="checkbox" id="sports" name="hobbies" value="sports"> <label for="sports">Sports</label>
+        <br></div>
+
+
+        <label for="event">Select Country</label>
+        <select id="ct" name="ct" required>
+            <option value="" disabled selected>Select your Country</option>
+            <option value="East Asia">East Asia</option>
+            <option value="Europra">Europa</option>
+            <option value="America">America</option>
+        </select>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

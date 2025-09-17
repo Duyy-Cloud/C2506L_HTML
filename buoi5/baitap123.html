@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homework — Schedule, Pricing, Registration</title>
+  <link rel="stylesheet" href="baitap.css" />
+</head>
+<body>
+  <div class="wrap">
+    <section>
+      <h1>Weekly Timetable</h1>
+      <table class="timetable" aria-label="Weekly timetable">
+        <thead>
+          <tr>
+            <th class="time-col">Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-col">08:00 - 09:30</td>
+            <td rowspan="2">Math<br><small>Room 101</small></td>
+            <td>English<br><small>Room 202</small></td>
+            <td colspan="2">Project Work<br><small>Lab A</small></td>
+            <td>Art<br><small>Room 305</small></td>
+          </tr>
+          <tr>
+            <td class="time-col">09:40 - 11:10</td>
+            <td>Physics<br><small>Lab B</small></td>
+            <td></td>
+            <td>History<br><small>Room 210</small></td>
+          </tr>
+          <tr>
+            <td class="time-col">11:20 - 12:10</td>
+            <td>PE<br><small>Gym</small></td>
+            <td>Biology<br><small>Lab C</small></td>
+            <td>Math Review<br><small>Room 101</small></td>
+            <td>Computer Science<br><small>Lab D</small></td>
+            <td rowspan="2">Assembly<br><small>Main Hall</small></td>
+          </tr>
+          <tr>
+            <td class="time-col">13:30 - 15:00</td>
+            <td colspan="2">Group Study<br><small>Room 120</small></td>
+            <td>French<br><small>Room 220</small></td>
+            <td>Music<br><small>Room 330</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Pricing</h1>
+      <div class="cards">
+        <article class="card">
+          <div class="title">Basic</div>
+          <div class="price">$9 <small>/mo</small></div>
+          <ul class="features"><li>1 product</li><li>Basic analytics</li><li>Email support</li></ul>
+          <div style="margin-top:auto;display:flex;gap:8px;justify-content:flex-end">
+            <a class="btn btn-outline">Choose</a>
+            <a class="btn btn-primary">Buy</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="title">Pro</div>
+          <div class="price">$29 <small>/mo</small></div>
+          <ul class="features"><li>10 products</li><li>Advanced analytics</li><li>Priority support</li></ul>
+          <div style="margin-top:auto;display:flex;gap:8px;justify-content:flex-end">
+            <a class="btn btn-outline">Choose</a>
+            <a class="btn btn-primary">Buy</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="title">Business</div>
+          <div class="price">$79 <small>/mo</small></div>
+          <ul class="features"><li>Unlimited products</li><li>Custom reports</li><li>Phone support</li></ul>
+          <div style="margin-top:auto;display:flex;gap:8px;justify-content:flex-end">
+            <a class="btn btn-outline">Choose</a>
+            <a class="btn btn-primary">Buy</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h1>Product Table + Registration</h1>
+      <div class="flex">
+        <div>
+          <table class="products" aria-describedby="prod-list">
+            <caption id="prod-list" style="text-align:left;font-weight:700;padding:8px 0">Products</caption>
+            <thead>
+              <tr><th>SKU</th><th>Product</th><th>Category</th><th>Price</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>BK-001</td><td>Notebook A5</td><td>Stationery</td><td>$3.50</td><td>In stock</td></tr>
+              <tr><td>EL-210</td><td>Wireless Earbuds</td><td>Electronics</td><td>$49.99</td><td>Low stock</td></tr>
+              <tr><td>HM-07</td><td>Ceramic Mug</td><td>Home</td><td>$8.00</td><td>In stock</td></tr>
+              <tr><td>CL-55</td><td>Basic T-Shirt</td><td>Clothing</td><td>$12.00</td><td>Out of stock</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <form id="regForm" novalidate>
+          <h2 style="margin-top:0">Registration</h2>
+          <label for="fullname">Full name *</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Jane Doe" required />
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="product">Interested product</label>
+          <input id="product" name="product" type="text" placeholder="Click a product from the table" />
+
+          <label for="why">Why do you want to join?</label>
+          <textarea id="why" name="why" rows="4" placeholder="A short sentence..."></textarea>
+
+          <div class="submit-row">
+            <div class="small">Required fields marked with *</div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

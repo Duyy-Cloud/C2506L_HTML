@@ -1,0 +1,112 @@
+* {
+    box-sizing: inherit;   
+ }
+ html {
+     font-size: 62.5%;
+     line-height: 1.6rem;
+     box-sizing: border-box;
+ }
+ body {
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     padding: 0;
+     margin: 0;
+ }
+ :root {
+     --header-height: 120px;
+     --navbar-height: 34px;
+     --header-width-search-height: calc(var(--header-height) - var(--navbar-height));
+     --header__sort-height : 50px;
+     --text-color: rgb(47, 47, 47);
+ }
+ 
+ 
+ .select__input {
+     position: relative;
+     height: 35px;
+     min-width: 200px;
+     padding: 0 12px;
+     border-radius: 2px;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: 1.4rem;
+ }
+ .select__input--list {
+     position: absolute;
+     background-color: white;
+     left: 0;
+     right: 0;
+     top: 25px;
+     border-radius: 2px;
+     display: block;
+     padding-left: 0;
+     list-style-type: none;
+     padding: 4px 0;
+     display: none;
+     z-index: 99;
+ }
+ .select__input--list::before {
+     content: "";
+     position: absolute;
+     height: 10px;
+     width: 100%;
+     top: -5px;
+ }
+ .select__input:hover .select__input--list {
+     display: block;
+ }
+ .select__input--item--link  {
+     color: black;
+     text-decoration: none;
+     padding: 5px 10px;
+     display: block;
+     font-size: 1.3rem;
+ 
+ }
+ .select__input--item--link:hover {
+     color: orangered;
+ }
+ 
+ /* Nagination */
+ 
+ .nagination {
+     display: flex;
+     justify-content: center;
+     list-style: none;
+     align-items: center;
+ 
+ }
+ .nagination__item {
+     margin: 0 5px;
+ }
+ .nagination__item--active .nagination__item--link {
+     background-color: orangered;
+     color: white;
+ 
+ }
+ .nagination__item--active:hover .nagination__item--link {
+     background-color: rgb(240, 82, 25);
+ }
+ i.nagination__item--icon {
+     font-size: 1.6rem;
+     font-weight: 300;
+ }
+ .nagination__item--link {
+     display: block;
+     text-decoration: none;
+     color: rgb(126, 126, 126);
+     font-size: 1.6rem;
+     min-width: 40px;
+     height: 30px;
+     text-align: center;
+     line-height: 30px;
+     border-radius: 3px;
+ }
+ 
+ /* footer */
+ 
+ 
+ 
+ 

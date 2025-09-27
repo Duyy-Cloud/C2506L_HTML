@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>baitap</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background: gray;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+ <p id="text">Hello to JavaScript DOM.</p>
+<button onclick="changeContent()">Change Content</button>
+
+  <div id="box"></div>
+  <button onclick="changeColor('red')">Red</button>
+  <button onclick="changeColor('blue')">Blue</button>
+  <button onclick="changeColor('yellow')">Yellow</button>
+
+  <p id="para">Press hide to hide or press show to show</p>
+  <button onclick="hidePara()">Hide</button>
+  <button onclick="showPara()">Show</button>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button onclick="addItem()">Add</button>
+    <br><br>
+
+  <input type="text" id="name" placeholder="Enter your name">
+  <button onclick="sayHello()">Greet</button>
+
+  <script>
+    function changeContent() {
+    document.getElementById("text").textContent =
+      "Welcome to JavaScript DOM";
+    }
+    function changeColor(color) {
+      document.getElementById("box").style.background = color;
+    }
+
+    function hidePara() {
+      document.getElementById("para").style.display = "none";
+    }
+    function showPara() {
+      document.getElementById("para").style.display = "block";
+    }
+
+    function addItem() {
+      const li = document.createElement("li");
+      li.textContent = "New Item";
+      document.getElementById("myList").appendChild(li);
+    }
+
+    function sayHello() {
+      const name = document.getElementById("name").value;
+      if (name.trim() !== "") {
+        alert("Hello, " + name);
+      } else {
+        alert("enter your name");
+      }
+    }
+
+  </script>
+</body>
+</html>
